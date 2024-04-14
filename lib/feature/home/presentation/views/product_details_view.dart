@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:shop_ui/feature/home/data/model/product.dart';
-import 'rating_reviews_view.dart';
+import 'package:shop_ui/feature/home/presentation/views/product_info_view.dart';
+import 'package:shop_ui/feature/home/presentation/views/select_color_view.dart';
 
 class ProductDetailesView extends StatelessWidget {
   final Product product;
@@ -21,45 +23,17 @@ class ProductDetailesView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            product.title,
-            style: const TextStyle(
+          ProductInfoView(product: product),
+          const SizedBox(height: 20),
+          const Text(
+            'Color',
+            style: TextStyle(
+              fontSize: 18,
               fontWeight: FontWeight.bold,
-              fontSize: 22,
             ),
           ),
-          Row(
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    '\$${product.price}',
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 22,
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  RatingReviewsView(rate: product.rate),
-                ],
-              ),
-              const Spacer(),
-              const Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(text: 'Seller: '),
-                    TextSpan(
-                      text: 'Tarqual isalm',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          )
+          const SizedBox(height: 10),
+          SelectColorView(colors: product.colors),
         ],
       ),
     );
