@@ -1,16 +1,11 @@
-# shop_ui
 
-A new Flutter project.
+#  <img src="https://github.com/MohmaedSobhy/Shop_App_UI/assets/70748430/d5f2145e-c6b6-4da4-8d97-5e99d8ec9772" alt="App Logo" width="40" height="40" style="margin-right: 10px;"> Shop App UI 
+   it's simple practice to build these screens
 
-## Getting Started
+![shop ui screen](https://github.com/MohmaedSobhy/Shop_App_UI/assets/70748430/0610b33a-aa08-4e78-aad9-676c358d82c5)
 
-This project is a starting point for a Flutter application.
+## Tech Stack:
+- **Flutter:** The app is developed using Flutter, a powerful and flexible framework for building natively compiled applications for mobile, web, and desktop from a single codebase.
+- **Dart:** The programming language used for building Flutter applications, known for its simplicity and efficiency.
+- **MVVM Architecture:** The app follows the Model-View-ViewModel architectural pattern, dividing the application into distinct layers for improved organization and maintainability.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
