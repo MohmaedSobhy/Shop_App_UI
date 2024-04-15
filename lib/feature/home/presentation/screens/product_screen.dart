@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_ui/core/theme/colors.dart';
 import 'package:shop_ui/feature/home/data/model/product.dart';
 import 'package:shop_ui/feature/home/presentation/views/product_body_view.dart';
+import 'package:shop_ui/feature/home/presentation/widgets/custom_floating_action_button.dart';
 
 class ProductScreen extends StatelessWidget {
   final Product product;
@@ -10,10 +10,17 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.kcontentColor,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: const CustomeFloatingActionButton(),
       body: SafeArea(
-        child: ProductBodyView(
-          product: product,
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: ProductBodyView(
+                product: product,
+              ),
+            )
+          ],
         ),
       ),
     );

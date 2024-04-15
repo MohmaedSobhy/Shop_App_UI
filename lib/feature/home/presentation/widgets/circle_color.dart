@@ -9,7 +9,7 @@ class CircleColorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: const Duration(microseconds: 300),
+      duration: Duration(microseconds: 300),
       width: 35,
       height: 35,
       margin: const EdgeInsets.only(right: 15),

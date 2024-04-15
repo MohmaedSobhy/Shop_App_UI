@@ -16,7 +16,7 @@ class ProductBodyView extends StatelessWidget {
         const ProductAppBarView(),
         ProductSliderView(imageUrl: product.image),
         const SizedBox(height: 20),
-        ProductDetailesView(product: product)
+        ProductDetailesView(product: product),
       ],
     );
   }

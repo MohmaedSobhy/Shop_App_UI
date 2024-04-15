@@ -4,6 +4,8 @@ import 'package:shop_ui/feature/home/data/model/product.dart';
 import 'package:shop_ui/feature/home/presentation/views/product_info_view.dart';
 import 'package:shop_ui/feature/home/presentation/views/select_color_view.dart';
 
+import 'product_description_view.dart';
+
 class ProductDetailesView extends StatelessWidget {
   final Product product;
   const ProductDetailesView({super.key, required this.product});
@@ -34,6 +36,8 @@ class ProductDetailesView extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           SelectColorView(colors: product.colors),
+          const SizedBox(height: 10),
+          ProductDescriptionView(description: product.description),
         ],
       ),
     );
