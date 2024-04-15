@@ -53,9 +53,11 @@ class _MainScreenState extends State<MainScreen> {
                   currentScreen = 0;
                 });
               },
-              icon: const Icon(
+              icon: Icon(
                 Ionicons.grid_outline,
-                color: Colors.black,
+                color: (currentScreen == 0)
+                    ? AppColor.kprimaryColor
+                    : Colors.black,
               ),
             ),
             IconButton(
@@ -64,9 +66,11 @@ class _MainScreenState extends State<MainScreen> {
                   currentScreen = 1;
                 });
               },
-              icon: const Icon(
+              icon: Icon(
                 Ionicons.heart_outline,
-                color: Colors.black,
+                color: (currentScreen == 1)
+                    ? AppColor.kprimaryColor
+                    : Colors.black,
               ),
             ),
             IconButton(
@@ -75,9 +79,11 @@ class _MainScreenState extends State<MainScreen> {
                   currentScreen = 3;
                 });
               },
-              icon: const Icon(
+              icon: Icon(
                 Ionicons.cart_outline,
-                color: Colors.black,
+                color: (currentScreen == 3)
+                    ? AppColor.kprimaryColor
+                    : Colors.black,
               ),
             ),
             IconButton(
@@ -86,9 +92,11 @@ class _MainScreenState extends State<MainScreen> {
                   currentScreen = 4;
                 });
               },
-              icon: const Icon(
+              icon: Icon(
                 Ionicons.person_outline,
-                color: Colors.black,
+                color: (currentScreen == 4)
+                    ? AppColor.kprimaryColor
+                    : Colors.black,
               ),
             ),
           ],

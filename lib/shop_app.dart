@@ -15,6 +15,7 @@ class ShopApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColor.kcontentColor,
         appBarTheme: const AppBarTheme(
           centerTitle: true,
+          backgroundColor: AppColor.kcontentColor,
         ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.orange,

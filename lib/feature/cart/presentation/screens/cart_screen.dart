@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:shop_ui/feature/cart/presentation/view/cart_body_view.dart';
 
+import '../view/bottom_sheet_view.dart';
+
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
 
@@ -29,7 +31,11 @@ class CartScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const CartBodyView(),
+      bottomSheet: const BottomSheetView(),
+      body: const Padding(
+        padding: EdgeInsets.only(top: 10),
+        child: CartBodyView(),
+      ),
     );
   }
 }

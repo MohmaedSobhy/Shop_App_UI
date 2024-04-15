@@ -73,59 +73,55 @@ class CartItemWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              Positioned(
-                top: 5,
-                right: 5,
-                child: Column(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Ionicons.trash_outline,
-                        color: Colors.red,
-                        size: 20,
-                      ),
+              Column(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Ionicons.trash_outline,
+                      color: Colors.red,
+                      size: 20,
                     ),
-                    Container(
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: AppColor.kcontentColor,
-                        border: Border.all(
-                          color: Colors.grey.shade200,
-                          width: 2,
+                  ),
+                  Container(
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: AppColor.kcontentColor,
+                      border: Border.all(
+                        color: Colors.grey.shade200,
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          iconSize: 18,
+                          icon: const Icon(
+                            Ionicons.remove_outline,
+                            color: Colors.black,
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            iconSize: 18,
-                            icon: const Icon(
-                              Ionicons.remove_outline,
-                              color: Colors.black,
-                            ),
+                        Text(
+                          item.quantity.toString(),
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
-                          Text(
-                            item.quantity.toString(),
-                            style: const TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                            ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          iconSize: 18,
+                          icon: const Icon(
+                            Ionicons.add_outline,
+                            color: Colors.black,
                           ),
-                          IconButton(
-                            onPressed: () {},
-                            iconSize: 18,
-                            icon: const Icon(
-                              Ionicons.add_outline,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
               ),
             ],
           ),

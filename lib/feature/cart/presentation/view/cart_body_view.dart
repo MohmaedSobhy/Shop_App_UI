@@ -8,16 +8,19 @@ class CartBodyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      itemCount: cartItems.length,
-      itemBuilder: (context, index) {
-        return CartItemWidget(
-          item: cartItems[index],
-        );
-      },
-      separatorBuilder: (context, index) {
-        return const SizedBox(height: 20);
-      },
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 6),
+      child: ListView.separated(
+        itemCount: cartItems.length,
+        itemBuilder: (context, index) {
+          return CartItemWidget(
+            item: cartItems[index],
+          );
+        },
+        separatorBuilder: (context, index) {
+          return const SizedBox(height: 20);
+        },
+      ),
     );
   }
 }
